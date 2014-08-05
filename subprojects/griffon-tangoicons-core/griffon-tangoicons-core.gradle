@@ -1,0 +1,9 @@
+apply plugin: 'groovy'
+apply from: rootProject.file('gradle/code-coverage.gradle')
+
+dependencies {
+    compile "org.codehaus.griffon:griffon-core:$griffonVersion"
+    compile 'org.freedesktop.tango:tango-icon-theme:0.8.90'
+}
+
+compileGroovy.enabled = false

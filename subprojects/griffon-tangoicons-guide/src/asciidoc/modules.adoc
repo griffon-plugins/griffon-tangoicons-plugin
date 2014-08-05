@@ -1,0 +1,56 @@
+
+[[_modules]]
+= Modules
+:subproject-base: {rootdir}/subprojects/griffon-tangoicons-
+:java-source: /src/main/java/
+:groovy-source: /src/main/groovy/
+:package-base: org/codehaus/griffon/runtime/
+:numbered:
+
+The following sections display all bindings per module. Use this information to
+successfully override a binding on your own modules or to troubleshoot a module
+binding if the wrong type has been applied by the Griffon runtime.
+
+== JavaFX
+
+Module name: +tangoicons-javafx-groovy+
+
+Depends on: +javafx-groovy+
+
+[source,java,options="nowrap"]
+----
+include::{subproject-base}javafx-groovy{groovy-source}{package-base}/javafx/tangoicons/TangoIconsJavaFXGroovyModule.java[tags=bindings,indent=0]
+----
+
+The following nodes will become available on a GroovyFX View
+
+[options="2*,header"]
+|===
+| Node     | Type
+| tangoIcon | +{api_link_tangoicon_javafx}+
+|===
+
+== Swing
+
+Module name: +tangoicons-swing-groovy+
+
+Depends on: +swing-groovy+
+
+[source,java,options="nowrap"]
+----
+include::{subproject-base}swing-groovy{java-source}{package-base}/swing/tangoicons/TangoIconsSwingGroovyModule.java[tags=bindings,indent=0]
+----
+
+The following nodes will become available on a GroovyFX View
+
+[options="2*,header"]
+|===
+| Node     | Type
+| tangoIcon | +{api_link_tangoicon_swing}+
+|===
+
+Both `tangoIcon` Nodes support the following properties
+
+icon:: The name of the icon, such as +actions:go-up+ or +actions:go-down+.
+size:: The size of the icon. One of +16+, +22+, +32+.
+

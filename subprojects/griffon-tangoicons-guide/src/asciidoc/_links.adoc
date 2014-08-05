@@ -1,0 +1,4 @@
+
+:link_tangoicons: link:http://tango.freedesktop.org/Tango_Icon_Library[Tango! icon set, window="_blank"]
+:api_link_tangoicon_javafx: link:api/griffon/javafx/support/tangoicons/TangoIcon.html[griffon.javafx.support.tangoicons.TangoIcon, window="_blank"]
+:api_link_tangoicon_swing: link:api/griffon/swing/support/tangoicons/TangoIcon.html[griffon.swing.support.tangoicons.TangoIcon, window="_blank"]

@@ -1,0 +1,17 @@
+= griffon-tangoicons-plugin
+:version: 1.0.0.SNAPSHOT
+:linkattrs:
+
+image:https://travis-ci.org/griffon-plugins/griffon-tangoicons-plugin.png?branch=master["Build Status", link="https://travis-ci.org/griffon-plugins/griffon-tangoicons-plugin"]
+image:https://coveralls.io/repos/griffon-plugins/griffon-tangoicons-plugin/badge.png["Coverage Status", link="https://coveralls.io/r/griffon-plugins/griffon-tangoicons-plugin"]
+image:http://img.shields.io/:semver-{version}-red.svg["Semantic Versioning", link="http://semver.org"]
+
+---
+
+Provides a shortcut for adding icons based on
+http://tango.freedesktop.org/Tango_Icon_Library[Tango! icon set, window="_blank"].
+
+Refer to the link:http://griffon-plugins.github.io/griffon-tangoicons-plugin/[plugin guide, window="_blank"] for
+further information on configuration and usage.
+
+
