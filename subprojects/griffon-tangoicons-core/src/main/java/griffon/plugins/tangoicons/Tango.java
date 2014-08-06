@@ -93,7 +93,6 @@ public enum Tango {
     ACTIONS_VIEW_FULLSCREEN("actions", "view-fullscreen"),
     ACTIONS_VIEW_REFRESH("actions", "view-refresh"),
     ACTIONS_WINDOW_NEW("actions", "window-new"),
-    ANIMATIONS_PROCESS_WORKING("animations", "process-working"),
     APPS_ACCESSORIES_CALCULATOR("apps", "accessories-calculator"),
     APPS_ACCESSORIES_CHARACTER_MAP("apps", "accessories-character-map"),
     APPS_ACCESSORIES_TEXT_EDITOR("apps", "accessories-text-editor"),
