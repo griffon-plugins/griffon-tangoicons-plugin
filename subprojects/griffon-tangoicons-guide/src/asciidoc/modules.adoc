@@ -13,9 +13,9 @@ binding if the wrong type has been applied by the Griffon runtime.
 
 == JavaFX
 
-Module name: +tangoicons-javafx-groovy+
+Module name: `tangoicons-javafx-groovy`
 
-Depends on: +javafx-groovy+
+Depends on: `javafx-groovy`
 
 [source,java,options="nowrap"]
 ----
@@ -26,15 +26,15 @@ The following nodes will become available on a Groovy View
 
 [options="2*,header"]
 |===
-| Node     | Type
-| tangoIcon | +{api_link_tangoicon_javafx}+
+| Node      | Type
+| tangoIcon | `{api_link_tangoicon_javafx}`
 |===
 
 == Swing
 
-Module name: +tangoicons-swing-groovy+
+Module name: `tangoicons-swing-groovy`
 
-Depends on: +swing-groovy+
+Depends on: `swing-groovy`
 
 [source,java,options="nowrap"]
 ----
@@ -45,12 +45,12 @@ The following nodes will become available on a Groovy View
 
 [options="2*,header"]
 |===
-| Node     | Type
-| tangoIcon | +{api_link_tangoicon_swing}+
+| Node      | Type
+| tangoIcon | `{api_link_tangoicon_swing}`
 |===
 
 Both `tangoIcon` Nodes support the following properties
 
-icon:: The name of the icon, such as +actions:go-up+ or +actions:go-down+.
-size:: The size of the icon. One of +16+, +22+, +32+.
+icon:: The name of the icon, such as `actions:go-up` or `actions:go-down`.
+size:: The size of the icon. One of `16`, `22`, `32`.
 
