@@ -21,14 +21,17 @@ import javafx.scene.image.Image;
 import javax.annotation.Nonnull;
 import java.net.URL;
 
+import static griffon.plugins.tangoicons.Tango.invalidDescription;
+import static griffon.util.GriffonNameUtils.requireNonBlank;
 import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
  */
 public class TangoIcon extends Image {
-    private final Tango tango;
-    private final int size;
+    private static final String ERROR_TANGO_NULL = "Argument 'tango' must not be null.";
+    private Tango tango;
+    private int size;
 
     public TangoIcon(@Nonnull Tango tango) {
         this(tango, 16);
@@ -36,21 +39,44 @@ public class TangoIcon extends Image {
 
     public TangoIcon(@Nonnull Tango tango, int size) {
         super(toURL(tango, size), true);
-        this.tango = tango;
+        this.tango = requireNonNull(tango, ERROR_TANGO_NULL);
         this.size = size;
     }
 
     public TangoIcon(@Nonnull String description) {
-        this(Tango.findByDescription(description));
+        super(toURL(description));
+        tango = Tango.findByDescription(description);
+
+        String[] parts = description.split(":");
+        if (parts.length == 3) {
+            try {
+                size = Integer.parseInt(parts[2]);
+            } catch (NumberFormatException e) {
+                throw invalidDescription(description, e);
+            }
+        } else {
+            size = 16;
+        }
     }
 
     @Nonnull
     private static String toURL(@Nonnull Tango tango, int size) {
-        requireNonNull(tango, "Argument 'tango' must not be null.");
+        requireNonNull(tango, ERROR_TANGO_NULL);
         String resource = tango.asResource(size);
         URL url = Thread.currentThread().getContextClassLoader().getResource(resource);
         if (url == null) {
-            throw new IllegalArgumentException("Icon " + tango.formatted() + " does not exist");
+            throw new IllegalArgumentException("Icon " + tango + ":" + size + " does not exist");
+        }
+        return url.toExternalForm();
+    }
+
+    @Nonnull
+    private static String toURL(@Nonnull String description) {
+        requireNonBlank(description, "Argument 'description' must not be blank");
+        String resource = Tango.asResource(description);
+        URL url = Thread.currentThread().getContextClassLoader().getResource(resource);
+        if (url == null) {
+            throw new IllegalArgumentException("Icon " + description + " does not exist");
         }
         return url.toExternalForm();
     }
